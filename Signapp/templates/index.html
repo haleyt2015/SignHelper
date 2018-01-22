@@ -1,5 +1,13 @@
 <!-- howdy/templates/index.html -->
 <!DOCTYPE html>
+
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -7,6 +15,19 @@
     </head>
     <body>
         <h>Signhelper! Here to help students with their teachers</h1>
+
+      {% buttons %}
+        <button type="submit" class="btn btn-primary">
+          {% bootstrap_icon "star" %} Playtime
+        </button>
+        <button type="submit" class="btn btn-primary">
+          {% bootstrap_icon "apple" %} Lunch
+        </button>
+        <button type="submit" class="btn btn-primary">
+            Potty
+        </button>
+      {% endbuttons %}
+
     <a href="/about/">About Me</a>
     </body>
 </html>
