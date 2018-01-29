@@ -1,31 +1,36 @@
+
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 <html>
 <body>
-    <form action="http://127.0.0.1:8000/index/">
-		<fieldset>
-			<legend>Sign in Page</legend>
+	<div class="container">
+		<div class="jumbotron text-center">
+    		<h1>SignHelper</h1>
+			<form action="http://127.0.0.1:8000/index/">
+				<p>
+					<label>Please Choose a student to start:</label>
+					<input type="text" name ="Student Name" list="students"/>
+					<datalist id ="students">
+						<option value ="Steve Sica">Steve Sica</option>
+						<option value="Terry Swan">Terry Swan</option>
+						<option value="Eric Keeley">Eric Keeley</option>
+						<option value="Matthew Gonzalez">Matthew Gonzalez</option>
+					</datalist>
+					<br/><br/>
 
-			<p>
-				<label>Please Choose a student to start:</label>
-				<input type="text" name ="Student Name" list="students"/>
-				<datalist id ="students">
-					<option value ="Steve Sica">Steve Sica</option>
-					<option value="Terry Swan">Terry Swan</option>
-					<option value="Eric Keeley">Eric Keeley</option>
-					<option value="Matthew Gonzalez">Matthew Gonzalez</option>
-				</datalist>
-				<br/><br/>
+					<input type="submit" value="submit" />
+				</p>
 
-                <input type="submit" value="submit" />
-			</p>
+			<a href="/index/">Home Page</a>
+			<a href="/about/">About Me</a>
+			</form>
+		</div>
+	</div>
 
-
-		</fieldset>
-	</form>
-
-
-    <a href="/index/">Home Page</a>
-    <a href="/about/">About Me</a>
-    </form>
 
 </body>
 </html>
