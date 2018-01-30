@@ -14,20 +14,21 @@
         <title>SignHelper</title>
     </head>
     <body>
-        <h>Signhelper! Here to help students with their teachers</h1>
-
-      {% buttons %}
-        <button type="submit" class="btn btn-primary">
-          {% bootstrap_icon "star" %} Playtime
-        </button>
-        <button type="submit" class="btn btn-primary">
-          {% bootstrap_icon "apple" %} Lunch
-        </button>
-        <button type="submit" class="btn btn-primary">
-            Potty
-        </button>
-      {% endbuttons %}
-
-    <a href="/about/">About Me</a>
+		<div class="jumbotron text-center">
+            <h1>Signhelper</h1>
+            {% buttons %}
+            <button type="submit" class="btn btn-primary">
+              {% bootstrap_icon "star" %} Play
+            </button>
+            <button type="submit" class="btn btn-primary">
+              {% bootstrap_icon "apple" %} Lunch
+            </button>
+            <button type="submit" class="btn btn-primary">
+              {% bootstrap_icon "tree-deciduous" %} Outside
+            </button>
+            {% endbuttons %}
+            <a href="/about/">About Me</a>
+            <a href="/">Go Back</a>
+        </div>
     </body>
 </html>
